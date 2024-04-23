@@ -15,7 +15,7 @@ npm run dev -- --open
 
 Sveltekit uses a thing called an adapter. I do not really understand what it is and I do not care. I just want it to work. In `svelte.config`, add:
 
-`import adapter from '@sveltejs/adapter-static';
+          	import adapter from '@sveltejs/adapter-static';
 
 		adapter: adapter({
 			// default options are shown. On some platforms
@@ -31,3 +31,17 @@ Sveltekit uses a thing called an adapter. I do not really understand what it is 
 In the documentation, it is written `fallback: undefined` I do not know why. But it is not working since it is not producing `index.html`. The line `strict: false` is for avoiding a strange error.
 
 
+
+
+## Setup for github pages
+
+Do `npm install gh-pages`.
+Add `"deploy": "npm run build && npx gh-pages -d build -t true"` as a script in `package.json`.
+
+In `svelte.config.js`, add:
+
+		paths: {
+			base: process.env.NODE_ENV === 'production' ? '/replace-by-the-name-of-your-app' : '',
+		}
+
+By running `npm run deploy` it will compile your project and deploy your application to the `gt-pages` branch.
