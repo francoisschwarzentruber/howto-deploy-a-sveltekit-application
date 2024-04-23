@@ -1,6 +1,6 @@
 # How to deploy a sveltekit application
 
-For me, it was super easy to develop a small Sveltekit application. Really, I love Svelte. It is super simple to use. But it was **horribly difficult** to deploy it on a github page.
+For me, it was super easy to develop a small Sveltekit application. Really, **I love Svelte**. It is super simple to use. But it was **horribly difficult** to deploy it on a github page.
 
 ## Setup your application project
 
